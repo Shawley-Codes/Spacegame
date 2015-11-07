@@ -3,12 +3,12 @@ using System.Collections;
 
 public class spawn : MonoBehaviour {
     private Rigidbody2D rb;
-    public float speed;
+    private float speed;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        speed = Random.Range(4, 8);
     }
     void Update()
     {

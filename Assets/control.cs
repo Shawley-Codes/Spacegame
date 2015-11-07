@@ -18,6 +18,7 @@ public class control : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        if (gameObject != null) { 
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //uses arrow keys
 		float moveVertical = Input.GetAxis ("Vertical");
 		
@@ -29,8 +30,8 @@ public class control : MonoBehaviour {
 			Mathf.Clamp (rb.position.x, boundary.xMin, boundary.xMax),  
 			Mathf.Clamp (rb.position.y, boundary.yMin, boundary.yMax)
 			);
-	
-		//rb.rotation = Quaternion.Euler (0.0f, 0.0f, rb.velocity.x * -tilt);
-	}
+        }
+        //rb.rotation = Quaternion.Euler (0.0f, 0.0f, rb.velocity.x * -tilt);
+    }
 }
 

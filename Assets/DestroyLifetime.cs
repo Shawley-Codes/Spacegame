@@ -7,7 +7,10 @@ public class DestroyLifetime : MonoBehaviour {
 
         void Start()
         {
-            Destroy(gameObject, lifetime);
+        if (gameObject != null)
+            {
+               // Destroy(gameObject, lifetime); //causing prblects
+            }
         }
 }
 

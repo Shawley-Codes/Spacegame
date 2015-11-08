@@ -9,16 +9,18 @@ public class destroybycontact : MonoBehaviour {
 
         if (other.tag == "Hazard")
         {
+
             return;
         }
         else if (other.tag == "Boundary")
-        { Destroy(gameObject);
+        { Destroy(gameObject); 
         }
+        else {
         Destroy(other.gameObject);
         Destroy(gameObject);
         Debug.Log(other.name);
-        
-        
+
+    }
         
     }
 }

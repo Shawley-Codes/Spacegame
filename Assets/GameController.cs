@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
             }
                 i = 0;
                 hazardCount = hazardCount +  6;
-                spawnWait = spawnWait - 0.2f;
+                spawnWait = spawnWait - 0.05f;
             yield return new WaitForSeconds(waveWait);
         }
     }

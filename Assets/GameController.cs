@@ -31,7 +31,9 @@ public class GameController : MonoBehaviour
                 Instantiate(hazard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
-            i = 0;
+                i = 0;
+                hazardCount = hazardCount +  6;
+                spawnWait = spawnWait - 0.05f;
             yield return new WaitForSeconds(waveWait);
         }
     }

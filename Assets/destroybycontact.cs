@@ -2,13 +2,18 @@
 using System.Collections;
 
 public class destroybycontact : MonoBehaviour {
-    public GameObject GO;
+    //public GameObject GO;
     public SpriteRenderer gameoverscreen;
+    public SpriteRenderer Restart;
+    public SpriteRenderer quit;
     void Start()
     {
-        gameoverscreen.enabled = false;
-        //rb = GetComponent<Rigidbody2D>();
-        GO = GetComponent<GameObject>();
+        //GO = GetComponent<GameObject>();
+       // gameoverscreen.enabled = false; //these activate when they spawn again.
+       // Restart.enabled = false;
+       // quit.enabled = false;
+        
+       
         
     }
 
@@ -32,8 +37,10 @@ public class destroybycontact : MonoBehaviour {
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            Debug.Log(other.name);
+            Debug.Log("Ship is dead");
             gameoverscreen.enabled = true;
+            Restart.enabled = true;
+            quit.enabled = true;
         }
         else { 
             Destroy(other.gameObject);
